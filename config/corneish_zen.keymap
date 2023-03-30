@@ -1,6 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-//#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/bt.h>
 
 // A Colemak-DH based 6 column Corneish-Zen laid out with CAD prioritization
 // Shift is accomplished with Mod-Tap on 16 & 19 (T & N)
@@ -41,12 +41,37 @@
                         label = "Base";                 
                         bindings = <
    &kp TAB      &kp Q   &kp W   &kp F   &kp P   &kp B          &kp J    &kp L   &kp U     &kp Y   &kp '    &kp BSPC
-   &kp LCTRL    &kp A   &kp R   &kp S   &mt LSHIFT T &kp G               &kp M   &mt RSHIFT N &kp E     &kp I   &kp O    &kp SEMI 
+   &kp LCTRL    &kp A   &kp R   &kp S   &mt LSHFT T &kp G               &kp M   &mt RSHFT N &kp E     &kp I   &kp O    &kp SEMI 
    &kp LSHFT    &kp Z   &kp X   &kp C   &kp D        &kp V               &kp N   &kp M        &kp COMMA &kp DOT &kp FSLH &kp GUI
                   &mt 3 ESC   &mt 2 TAB    &mt 1 SPACE      &mt 1 SPACE &mt 2 SPACE &mt 3 ENT
                         >;
                 };
-                
-             
+                num_layer {
+                        label = "Numbers";                 
+                        bindings = <
+   &kp TAB      &kp Q   &kp W   &kp F   &kp P   &kp B          &kp J    &kp L   &kp U     &kp Y   &kp '    &kp BSPC
+   &kp LCTRL    &kp A   &kp R   &kp S   &mt LSHFT T &kp G               &kp M   &mt RSHFT N &kp E     &kp I   &kp O    &kp SEMI 
+   &kp LSHFT    &kp Z   &kp X   &kp C   &kp D        &kp V               &kp N   &kp M        &kp COMMA &kp DOT &kp FSLH &kp GUI
+                  &mt 3 ESC   &mt 2 TAB    &mt 1 SPACE      &mt 1 SPACE &mt 2 SPACE &mt 3 ENT
+                        >;
+                };                
+                sym_layer {
+                        label = "Symbols";                 
+                        bindings = <
+   &kp TAB      &kp Q   &kp W   &kp F   &kp P   &kp B          &kp J    &kp L   &kp U     &kp Y   &kp '    &kp BSPC
+   &kp LCTRL    &kp A   &kp R   &kp S   &mt LSHFT T &kp G               &kp M   &mt RSHFT N &kp E     &kp I   &kp O    &kp SEMI 
+   &kp LSHFT    &kp Z   &kp X   &kp C   &kp D        &kp V               &kp N   &kp M        &kp COMMA &kp DOT &kp FSLH &kp GUI
+                  &mt 3 ESC   &mt 2 TAB    &mt 1 SPACE      &mt 1 SPACE &mt 2 SPACE &mt 3 ENT
+                        >;
+                };
+                nav_layer {
+                        label = "Navigation";                 
+                        bindings = <
+   &kp TAB      &kp Q   &kp W   &kp F   &kp P   &kp B          &kp J    &kp L   &kp U     &kp Y   &kp '    &kp BSPC
+   &kp LCTRL    &kp A   &kp R   &kp S   &mt LSHFT T &kp G               &kp M   &mt RSHFT N &kp E     &kp I   &kp O    &kp SEMI 
+   &kp LSHFT    &kp Z   &kp X   &kp C   &kp D        &kp V               &kp N   &kp M        &kp COMMA &kp DOT &kp FSLH &kp GUI
+                  &mt 3 ESC   &mt 2 TAB    &mt 1 SPACE      &mt 1 SPACE &mt 2 SPACE &mt 3 ENT
+                        >;
+                };             
         };
 };
