@@ -15,12 +15,12 @@
 //                          |36 ESC  |37 SPC  |38 SPC |       |39 SPC  |40 SPC  |41 ENT  |
 
 // Layers 
-//#define MTH 1
-//#define SYM 2
-//#define NAV 3
-//#define FUN 4
-//#define BLU 5
-//#define GAM 6
+#define MTH 1
+#define SYM 2
+#define NAV 3
+#define FUN 4
+#define BLU 5
+#define GAM 6
 
 / {
   chosen {
@@ -43,7 +43,7 @@
    &kp TAB      &kp Q   &kp W   &kp F   &kp P   &kp B          &kp J    &kp L   &kp U     &kp Y   &kp SEMI    &kp BSPC
    &kp LCTRL    &kp A   &kp R   &kp S   &mt LSHFT T &kp G               &kp M   &mt RSHFT N &kp E     &kp I   &kp O    &kp SEMI 
    &kp LSHFT    &kp Z   &kp X   &kp C   &kp D        &kp V               &kp N   &kp M        &kp COMMA &kp DOT &kp FSLH &kp GUI
-                  &lt 3 ESC   &lt 2 TAB    &lt 1 SPACE      &lt 1 SPACE &lt 2 SPACE &lt 3 RET
+                  &lt NAV ESC   &lt SYM TAB    &lt MTH SPACE      &lt 1 SPACE &lt 2 SPACE &lt 3 RET
                         >;
                 };
 
@@ -75,6 +75,24 @@
    &kp LSHFT    &kp Z   &kp X   &kp C   &kp D        &kp V               &kp N   &kp M        &kp COMMA &kp DOT &kp FSLH &kp GUI
                   &lt 3 ESC   &lt 2 TAB    &lt 1 SPACE      &lt 1 SPACE &lt 2 SPACE &lt 3 RET
                         >;
-                };             
+                };
+                fun_layer {
+                        label = "Functions";                 
+                        bindings = <
+   &kp TAB      &kp Q   &kp W   &kp F   &kp P   &kp B          &kp J    &kp L   &kp U     &kp Y   &kp SEMI    &kp BSPC
+   &kp LCTRL    &kp A   &kp R   &kp S   &mt LSHFT T &kp G               &kp M   &mt RSHFT N &kp E     &kp I   &kp O    &kp SEMI 
+   &kp LSHFT    &kp Z   &kp X   &kp C   &kp D        &kp V               &kp N   &kp M        &kp COMMA &kp DOT &kp FSLH &kp GUI
+                  &lt 3 ESC   &lt 2 TAB    &lt 1 SPACE      &lt 1 SPACE &lt 2 SPACE &lt 3 RET
+                        >;
+                };    
+                bth_layer {
+                        label = "BT Pairing";                 
+                        bindings = <
+   &kp TAB      &kp Q   &kp W   &kp F   &kp P   &kp B          &kp J    &kp L   &kp U     &kp Y   &kp SEMI    &kp BSPC
+   &kp LCTRL    &kp A   &kp R   &kp S   &mt LSHFT T &kp G               &kp M   &mt RSHFT N &kp E     &kp I   &kp O    &kp SEMI 
+   &kp LSHFT    &kp Z   &kp X   &kp C   &kp D        &kp V               &kp N   &kp M        &kp COMMA &kp DOT &kp FSLH &kp GUI
+                  &lt 3 ESC   &lt 2 TAB    &lt 1 SPACE      &lt 1 SPACE &lt 2 SPACE &lt 3 RET
+                        >;
+                };                 
         };
 };
