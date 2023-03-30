@@ -43,7 +43,7 @@
    &kp TAB      &kp Q   &kp W   &kp F   &kp P   &kp B          &kp J    &kp L   &kp U     &kp Y   &kp SEMI    &kp BSPC
    &kp LCTRL    &kp A   &kp R   &kp S   &mt LSHFT T &kp G               &kp M   &mt RSHFT N &kp E     &kp I   &kp O    &kp SEMI 
    &kp LSHFT    &kp Z   &kp X   &kp C   &kp D        &kp V               &kp N   &kp M        &kp COMMA &kp DOT &kp FSLH &kp GUI
-                  &lt 3 ESC   &lt 2 TAB    &lt 1 SPACE      &lt 1 SPACE &lt 2 SPACE &lt 3 ENT
+                  &lt 3 ESC   &lt 2 TAB    &lt 1 SPACE      &lt 1 SPACE &lt 2 SPACE &lt 3 RET
                         >;
                 };
 
@@ -53,7 +53,7 @@
    &kp TAB      &kp Q   &kp N7   &kp N8   &kp N9   &kp B          &kp J    &kp L   &kp U     &kp Y   &kp SEMI    &kp BSPC
    &kp LCTRL    &kp A   &kp N4   &kp N5   &kp N6  &kp G               &kp M   &mt RSHFT N &kp E     &kp I   &kp O    &kp SEMI 
    &kp LSHFT    &kp Z   &kp N1   &kp N2   &kp N3        &kp N0               &kp N   &kp M        &kp COMMA &kp DOT &kp FSLH &kp GUI
-                  &lt 3 ESC   &lt 2 TAB    &lt 1 SPACE      &lt 1 SPACE &lt 2 SPACE &lt 3 ENT
+                  &lt 3 ESC   &lt 2 TAB    &lt 1 SPACE      &lt 1 SPACE &lt 2 SPACE &lt 3 RET
                         >;
                 };      
 
@@ -63,7 +63,7 @@
    &kp TAB      &kp Q   &kp W   &kp F   &kp P   &kp B          &kp J    &kp L   &kp U     &kp Y   &kp SEMI    &kp BSPC
    &kp LCTRL    &kp A   &kp R   &kp S   &mt LSHFT T &kp G               &kp M   &mt RSHFT N &kp E     &kp I   &kp O    &kp SEMI 
    &kp LSHFT    &kp Z   &kp X   &kp C   &kp D        &kp V               &kp N   &kp M        &kp COMMA &kp DOT &kp FSLH &kp GUI
-                  &lt 3 ESC   &lt 2 TAB    &lt 1 SPACE      &lt 1 SPACE &lt 2 SPACE &lt 3 ENT
+                  &lt 3 ESC   &lt 2 TAB    &lt 1 SPACE      &lt 1 SPACE &lt 2 SPACE &lt 3 RET
                         >;
                 };
 
@@ -73,7 +73,7 @@
    &kp TAB      &kp Q   &kp W   &kp F   &kp P   &kp B          &kp J    &kp L   &kp U     &kp Y   &kp SEMI    &kp BSPC
    &kp LCTRL    &kp A   &kp R   &kp S   &mt LSHFT T &kp G               &kp M   &mt RSHFT N &kp E     &kp I   &kp O    &kp SEMI 
    &kp LSHFT    &kp Z   &kp X   &kp C   &kp D        &kp V               &kp N   &kp M        &kp COMMA &kp DOT &kp FSLH &kp GUI
-                  &lt 3 ESC   &lt 2 TAB    &lt 1 SPACE      &lt 1 SPACE &lt 2 SPACE &lt 3 ENT
+                  &lt 3 ESC   &lt 2 TAB    &lt 1 SPACE      &lt 1 SPACE &lt 2 SPACE &lt 3 RET
                         >;
                 };             
         };
