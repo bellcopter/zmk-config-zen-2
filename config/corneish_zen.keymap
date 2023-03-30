@@ -15,12 +15,12 @@
 //                          |36 ESC  |37 SPC  |38 SPC |       |39 SPC  |40 SPC  |41 ENT  |
 
 // Layers 
-#define _MTH 1
-#define _SYM 2
-#define _NAV 3
-#define _FUN 4
-#define _BLU 5
-#define _GAM 6
+//#define MTH 1
+//#define SYM 2
+//#define NAV 3
+//#define FUN 4
+//#define BLU 5
+//#define GAM 6
 
 / {
   chosen {
@@ -43,18 +43,10 @@
    &kp TAB      &kp Q   &kp W   &kp F   &kp P   &kp B          &kp J    &kp L   &kp U     &kp Y   &kp '    &kp BSPC
    &kp LCTRL    &kp A   &kp R   &kp S   &mt LSHIFT T &kp G               &kp M   &mt RSHIFT N &kp E     &kp I   &kp O    &kp SEMI 
    &kp LSHFT    &kp Z   &kp X   &kp C   &kp D        &kp V               &kp N   &kp M        &kp COMMA &kp DOT &kp FSLH &kp GUI
-                  &mt _NAV ESC   &mt _SYM TAB    &mt _MTH SPACE      &mt _MTH SPACE &mt _SYM SPACE &mt _NAV ENT
+                  &mt 3 ESC   &mt 2 TAB    &mt 1 SPACE      &mt 1 SPACE &mt 2 SPACE &mt 3 ENT
                         >;
                 };
                 
-//                num_layer {
-//                        label = "NUMBER";
-//                        bindings = <
-//   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-//  &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-//   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-//                          	 &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
-//                        >;
-//                };              
+             
         };
 };
