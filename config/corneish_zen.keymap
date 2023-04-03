@@ -73,9 +73,9 @@
                 nav_layer {
                         label = "Navigation";                 
                         bindings = <
-   &kp TAB      &kp Q   &kp HOME   &kp UP   &kp END  &kp K_CUT &kp B               &kp SEMI  &kp K_CUT    &kp HOME   &kp UP     &kp END    &kp DEL
-   &kp LCTRL      &kp LEFT   &kp DOWN   &kp RIGHT &kp K_COPY   &trans            &trans    &kp K_COPY   &kp LEFT   &kp DOWN   &kp RIGHT    &kp SEMI 
-   &tog GAM    &kp Z   &kp X   &kp C   &kp K_PASTE        &kp K_COPY          &kp K_COPY   &kp K_PASTE   &kp COMMA &kp DOT &kp FSLH &kp LGUI
+   &kp TAB      &kp HOME   &kp UP   &kp END  &kp K_CUT  &trans            &trans   &kp K_CUT    &kp HOME   &kp UP     &kp END    &kp DEL
+   &kp LCTRL    &kp LEFT   &kp DOWN   &kp RIGHT &kp K_COPY   &trans        &trans    &kp K_COPY   &kp LEFT   &kp DOWN   &kp RIGHT    &kp SEMI 
+   &tog GAM     &kp Z      &kp X      &kp C     &kp K_PASTE  &kp K_COPY    &kp K_COPY   &kp K_PASTE   &kp COMMA &kp DOT &kp FSLH &kp LGUI
                                   &lt SYM ESC  &lt NAV TAB &lt MTH BKSP   &lt MTH SPACE &lt NAV SPACE &lt SYM RET
                         >;
                 };
