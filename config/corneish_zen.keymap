@@ -45,7 +45,7 @@
     &kp LALT    &kp Z        &kp X        &kp C        &kp D        &kp V          &kp K        &kp H        &kp COMMA    &kp DOT      &kp FSLH     &kp LGUI
    
 //                               |36 ESC      |37 SPC     |38 SPC       |                  |39 SPC       |40 SPC       |41 ENT       |
-                                  &lt SYM ESC  &lt NAV TAB &lt MTH BKSP                      &lt MTH SPACE &lt NAV SPACE &lt SYM RET
+                                  &lt SYM ESC  &lt MTH BKSP &lt NAV SPACE                      &lt NAV SPACE &lt MTH TAB &lt SYM RET
                         
                         >;
                 };
@@ -56,7 +56,7 @@
    &kp TAB      &kp Q   &kp N7   &kp N8   &kp N9  &kp MINUS          &kp MINUS &kp N7   &kp N8   &kp N9   &kp SEMI    &kp DEL
    &kp LCTRL    &kp A   &kp N4   &kp N5   &kp N6  &kp PLUS           &kp PLUS  &kp N4   &kp N5   &kp N6   &kp O    &kp SEMI 
    &kp LALT     &kp Z   &kp N1   &kp N2   &kp N3  &kp N0             &kp N0    &kp N1   &kp N2   &kp N3   &kp FSLH &kp LGUI
-                                  &lt SYM ESC  &lt NAV TAB &lt MTH BKSP   &lt MTH SPACE &lt NAV SPACE &lt SYM RET
+                                  &lt SYM ESC  &lt MTH BKSP &lt NAV SPACE                      &lt NAV SPACE &lt MTH TAB &lt SYM RET
                         >;
                 };       
 
@@ -66,17 +66,17 @@
    &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp DEL
    &kp LCTRL &trans   &trans &trans   &kp BSPC  &trans      &kp MINUS &kp BSPC &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
    &kp LALT  &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE 
-                                  &lt SYM ESC  &lt NAV TAB &lt MTH BKSP  &lt MTH SPACE &lt NAV SPACE &lt SYM RET
+                                   &lt SYM ESC  &lt MTH BKSP &lt NAV SPACE                      &lt NAV SPACE &lt MTH TAB &lt SYM RET
                         >;
                 };
 
                 nav_layer {
                         label = "Navigation";                 
                         bindings = <
-   &kp TAB      &kp HOME   &kp UP   &kp END  &kp K_CUT  &trans            &trans   &kp K_CUT    &kp HOME   &kp UP     &kp END    &kp DEL
+   &kp TAB      &kp HOME   &kp UP   &kp END  &kp K_CUT  &kp TAB            &kp TAB   &kp K_CUT    &kp HOME   &kp UP     &kp END    &kp DEL
    &kp LCTRL    &kp LEFT   &kp DOWN   &kp RIGHT &kp K_COPY   &trans        &trans    &kp K_COPY   &kp LEFT   &kp DOWN   &kp RIGHT    &kp SEMI 
    &tog GAM     &kp Z      &kp X      &kp C     &kp K_PASTE  &kp K_COPY    &kp K_COPY   &kp K_PASTE   &kp COMMA &kp DOT &kp FSLH &kp LGUI
-                                  &lt SYM ESC  &lt NAV TAB &lt MTH BKSP   &lt MTH SPACE &lt NAV SPACE &lt SYM RET
+                                   &lt SYM ESC  &lt MTH BKSP &lt NAV SPACE                      &lt NAV SPACE &lt MTH TAB &lt SYM RET
                         >;
                 };
                 fun_layer {
@@ -85,7 +85,7 @@
    &kp TAB      &kp F7   &kp F8   &kp F9   &kp F12   &kp B          &kp J    &kp L   &kp U     &kp Y   &kp SEMI    &kp DEL
    &kp LCTRL    &kp F4   &kp F5   &kp F6   &kp F11  &kp G               &kp M   &mt RSHFT N &kp E     &kp I   &kp O    &kp SEMI 
    &kp LSHFT    &kp F1   &kp F2   &kp F3   &kp F10        &kp V               &kp N   &kp M        &kp COMMA &kp DOT &kp FSLH &kp LGUI
-                                  &lt SYM ESC  &lt NAV TAB &lt MTH BKSP                      &lt MTH SPACE &lt NAV SPACE &lt SYM RET
+                                   &lt SYM ESC  &lt MTH BKSP &lt NAV SPACE                      &lt NAV SPACE &lt MTH TAB &lt SYM RET
                         >;
                 };    
                 bth_layer {
@@ -94,7 +94,7 @@
    &kp TAB      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4          &kp J    &kp L   &kp U     &kp Y   &kp SEMI    &kp BSPC
    &kp LCTRL    &kp A   &kp R   &kp S   &mt LSHFT T &kp G               &kp M   &mt RSHFT N &kp E     &kp I   &kp O    &kp SEMI 
    &kp LSHFT    &kp Z   &kp X   &kp C   &kp D        &kp V               &kp N   &kp M        &kp COMMA &kp DOT &kp FSLH &kp LGUI
-                  &lt NAV ESC   &lt SYM TAB    &lt MTH DEL      &lt MTH SPACE &lt SYM SPACE &lt NAV RET
+                                     &lt SYM ESC  &lt MTH BKSP &lt NAV SPACE                      &lt NAV SPACE &lt MTH TAB &lt SYM RET
                         >;
                 };       
                 game_layer {
@@ -103,7 +103,7 @@
    &kp TAB      &kp Q   &kp W   &kp F   &kp P   &kp B          &kp J    &kp L   &kp U     &kp Y   &kp SEMI    &kp BSPC
    &kp LCTRL    &kp A   &kp R   &kp S   &kp T &kp G               &kp M   &kp N &kp E     &kp I   &kp O    &kp SEMI 
    &tog GAM    &kp Z   &kp X   &kp C   &kp D        &kp V               &kp N   &kp M        &kp COMMA &kp DOT &kp FSLH &kp LGUI
-                  &lt NAV ESC   &lt SYM TAB    &lt MTH DEL      &lt MTH SPACE &lt SYM SPACE &lt NAV RET
+                                    &lt SYM ESC  &lt MTH BKSP &lt NAV SPACE                      &lt NAV SPACE &lt MTH TAB &lt SYM RET
                         >;
                 };                            
         };
