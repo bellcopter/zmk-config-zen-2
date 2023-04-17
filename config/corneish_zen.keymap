@@ -26,8 +26,21 @@
 
 
 
+
 // Keymaps:
 / {
+    behaviors {
+      hm: homerow_mods {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOMEROW_MODS";
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+        quick_tap_ms = <0>;
+        flavor = "tap-preferred";
+        bindings = <&kp>, <&kp>;
+      };
+    };        
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -35,23 +48,21 @@
                         label = "Base";                 
                         bindings = <
 // __________________________________________________________The Base Keyboard Layout (with key position)__________________________________________________________
-// |0  HART     |1  Q        |2  W        |3  F        |4  P        |5  B        | |6  J        |7  L        |8  U        |9  Y        |10 '        |11 DEL      |
-    &kp TAB      &kp Q        &kp W        &kp F        &kp P        &kp B          &kp J        &kp L        &kp U        &kp Y        &kp APOS     &kp DEL
-   
+// |0  HART     |1  Q        |2  W        |3  F        |4  P        |5  B        | |6  J        |7  L        |8  U        |9  Y        |10 '        |11 DEL      | 
 // |12 INFI     |13 A        |14 R        |15 S        |16 T        |17 G        | |18 M        |19 N        |20 E        |21 I        |22 O        |23 ;         |
-    &kp LCTRL    &kp A        &kp R        &kp S        &mt LSHFT T  &kp G          &kp M        &mt RSHFT N  &kp E        &kp I        &kp O        &kp SEMI 
-   
-// |24 CKMT     |25 Z        |26 X        |27 C        |28 D        |29 V        | |30 K        |31 H        |32 ,        |33 .        |34 /        |35 GUI       |  
-    &kp LALT    &kp Z        &kp X        &kp C        &kp D        &kp V          &kp K        &kp H        &kp COMMA    &kp DOT      &kp FSLH     &kp LGUI
-   
-//                               |36 ESC      |37 SPC     |38 SPC       |                  |39 SPC       |40 SPC       |41 ENT       |
-                                  &lt SYM ESC  &lt MTH BKSP &lt NAV SPACE                      &lt NAV SPACE &lt MTH TAB &lt SYM RET
-                        
+// |24 CKMT     |25 Z        |26 X        |27 C        |28 D        |29 V        | |30 K        |31 H        |32 ,        |33 .        |34 /        |35 GUI      |  
+//                                     |36 ESC       |37 SPC       |38 SPC       | |39 SPC       |40 SPC       |41 Return      |
+
+
+    &kp TAB      &kp Q        &kp W        &kp F        &kp P        &kp B          &kp J        &kp L        &kp U        &kp Y        &kp APOS     &kp DEL
+    &kp LCTRL    &hm LALT A   &hm LCTRL R  &hm LGUI S   &hm LSHFT T  &kp G          &kp M        &hm RSHFT N  &hm RGUI E   &hm RALT I   &hm RCTRL O  &kp SEMI 
+    &kp LALT     &kp Z        &kp X        &kp C        &kp D        &kp V          &kp K        &kp H        &kp COMMA    &kp DOT      &kp FSLH     &kp RET   
+                                      &lt SYM ESC  &lt MTH BKSP &lt NAV SPAC      &lt NAV SPACE   &lt MTH TAB   &lt SYM RET
                         >;
                 };
 
                 num_layer {
-                        label = "Numbers";                 
+                        label = "Math";                 
                         bindings = <
    &kp TAB      &kp Q   &kp N7   &kp N8   &kp N9  &kp MINUS          &kp MINUS &kp N7   &kp N8   &kp N9   &kp SEMI    &kp DEL
    &kp LCTRL    &kp A   &kp N4   &kp N5   &kp N6  &kp PLUS           &kp PLUS  &kp N4   &kp N5   &kp N6   &kp O    &kp SEMI 
@@ -73,8 +84,8 @@
                 nav_layer {
                         label = "Navigation";                 
                         bindings = <
-   &kp TAB      &kp HOME   &kp UP   &kp END  &kp K_CUT  &kp TAB            &kp TAB   &kp K_CUT    &kp HOME   &kp UP     &kp END    &kp DEL
-   &kp LCTRL    &kp LEFT   &kp DOWN   &kp RIGHT &kp K_COPY   &trans        &trans    &kp K_COPY   &kp LEFT   &kp DOWN   &kp RIGHT    &kp SEMI 
+   &kp TAB      &kp HOME   &kp UP   &kp END  &kp K_CUT  &kp TAB            &kp K_CUT    &kp HOME   &kp UP     &kp END    &kp DEL &kp TAB   
+   &kp LCTRL    &kp LEFT   &kp DOWN   &kp RIGHT &kp K_COPY   &trans        &kp K_COPY   &kp LEFT   &kp DOWN   &kp RIGHT &trans       &kp SEMI 
    &tog GAM     &kp Z      &kp X      &kp C     &kp K_PASTE  &kp K_COPY    &kp K_COPY   &kp K_PASTE   &kp COMMA &kp DOT &kp FSLH &kp LGUI
                                    &lt SYM ESC  &lt MTH BKSP &lt NAV SPACE                      &lt NAV SPACE &lt MTH TAB &lt SYM RET
                         >;
