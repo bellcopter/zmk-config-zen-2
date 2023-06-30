@@ -11,20 +11,15 @@
 
 // Layers 
 #define MTH 1
-#define SYM 2
-#define NAV 3
-#define FUN 4
-#define BLU 5
-#define GAM 6
+#define NAV 2
+#define FUN 3
+
 
 / {
   chosen {
     zmk,matrix_transform = &default_transform;
   };
 };
-
-
-
 
 
 // Keymaps:
@@ -34,7 +29,7 @@
         compatible = "zmk,behavior-hold-tap";
         label = "HOMEROW_MODS";
         #binding-cells = <2>;
-        tapping-term-ms = <100>;
+        tapping-term-ms = <150>;
         quick_tap_ms = <0>;
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
@@ -49,7 +44,7 @@
                         bindings = <
     &kp TAB      &kp Q        &kp W        &kp E        &kp R        &kp T          &kp Y        &kp U        &kp I        &kp O        &kp P         &kp BKSP
     &kp LCTRL    &hm LALT A   &hm LCTRL S  &hm LGUI D   &hm LSHFT F  &kp G          &kp H        &hm RSHFT J  &hm RGUI K   &hm RCTRL L  &hm RALT SEMI &kp APOS 
-    &kp LALT     &kp Z        &kp X        &kp C        &kp V        &kp B          &kp N        &kp M        &kp COMMA    &kp DOT      &kp FSLH      &kp RET   
+    &kp LALT     &kp Z        &kp X        &kp V        &kp C        &kp B          &kp N        &kp M        &kp COMMA    &kp DOT      &kp FSLH      &kp RET   
                                       &lt FUN ESC  &lt MTH BKSP &lt NAV SPACE       &lt NAV SPACE   &lt MTH TAB   &lt FUN RET
                         >;
                 };
@@ -64,16 +59,6 @@
                         >;
                 };       
 
-                sym_layer {
-                        label = "Symbols";                 
-                        bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp DEL
-   &kp LCTRL &trans   &trans &trans   &kp BSPC  &trans      &kp MINUS &kp BSPC &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LALT  &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE 
-                                   &lt SYM ESC  &lt MTH BKSP &lt NAV SPACE                      &lt NAV SPACE &lt MTH TAB &lt SYM RET
-                        >;
-                };
-
                 nav_layer {
                         label = "Navigation";                 
                         bindings = <
@@ -83,6 +68,7 @@
                                    &lt SYM ESC  &lt MTH BKSP &lt NAV SPACE                      &lt NAV SPACE &lt MTH TAB &lt SYM RET
                         >;
                 };
+
                 fun_layer {
                         label = "Functions";                 
                         bindings = <
@@ -92,23 +78,6 @@
                                    &lt SYM ESC  &lt MTH BKSP &lt NAV SPACE                      &lt NAV SPACE &lt MTH TAB &lt SYM RET
                         >;
                 };    
-                bth_layer {
-                        label = "BT Pairing";                 
-                        bindings = <
-   &kp TAB      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4          &kp J    &kp L   &kp U     &kp Y   &kp SEMI    &kp BSPC
-   &kp LCTRL    &kp A   &kp R   &kp S   &mt LSHFT T &kp G               &kp M   &mt RSHFT N &kp E     &kp I   &kp O    &kp SEMI 
-   &kp LSHFT    &kp Z   &kp X   &kp C   &kp D        &kp V               &kp N   &kp M        &kp COMMA &kp DOT &kp FSLH &kp LGUI
-                                     &lt SYM ESC  &lt MTH BKSP &lt NAV SPACE                      &lt NAV SPACE &lt MTH TAB &lt SYM RET
-                        >;
-                };       
-                game_layer {
-                        label = "Gaming";                 
-                        bindings = <
-   &kp TAB      &kp Q   &kp W   &kp F   &kp P   &kp B          &kp J    &kp L   &kp U     &kp Y   &kp SEMI    &kp BSPC
-   &kp LCTRL    &kp A   &kp R   &kp S   &kp T &kp G               &kp M   &kp N &kp E     &kp I   &kp O    &kp SEMI 
-   &tog GAM    &kp Z   &kp X   &kp C   &kp D        &kp V               &kp N   &kp M        &kp COMMA &kp DOT &kp FSLH &kp LGUI
-                                    &lt SYM ESC  &lt MTH BKSP &lt NAV SPACE                      &lt NAV SPACE &lt MTH TAB &lt SYM RET
-                        >;
-                };                            
+                        
         };
 };
