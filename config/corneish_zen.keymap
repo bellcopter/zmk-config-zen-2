@@ -52,9 +52,9 @@
                 num_layer {
                         label = "Math";                 
                         bindings = <
-   &kp TAB      &kp Q   &kp N7   &kp N8   &kp N9  &kp MINUS          &kp MINUS &kp N7   &kp N8   &kp N9   &kp EQUAL    &kp DEL
-   &kp LCTRL    &kp A   &kp N4   &kp N5   &kp N6  &kp PLUS           &kp PLUS  &kp N4   &kp N5   &kp N6   &kp KP_MULTIPLY    &kp SEMI 
-   &kp LALT     &kp Z   &kp N1   &kp N2   &kp N3  &kp N0             &kp N0    &kp N1   &kp N2   &kp N3   &kp FSLH &kp LGUI
+   &kp TAB       &kp Q        &kp N7       &kp N8       &kp N9      &kp MINUS           &kp MINUS     &kp N7       &kp N8       &kp N9       &kp EQUAL     &kp DEL
+   &kp LCTRL     &kp A        &kp N4       &kp N5       &kp N6      &kp PLUS            &kp PLUS      &kp N4       &kp N5       &kp N6       &kp KP_MULTIPLY    &kp SEMI 
+   &kp LALT      &kp Z        &kp N1       &kp N2       &kp N3      &kp N0              &kp N0        &kp N1       &kp N2       &kp N3       &kp FSLH      &kp LGUI
                                       &lt FUN ESC  &lt MTH BKSP &lt NAV SPACE       &lt NAV SPACE   &lt MTH TAB   &lt FUN RET
                         >;
                 };       
@@ -62,9 +62,9 @@
                 nav_layer {
                         label = "Navigation";                 
                         bindings = <
-   &kp TAB      &kp HOME   &kp UP   &kp END  &kp K_CUT  &kp TAB            &kp K_CUT    &kp HOME   &kp UP     &kp END    &kp DEL &kp TAB   
-   &kp LCTRL    &kp LEFT   &kp DOWN   &kp RIGHT &kp K_COPY   &trans        &kp K_COPY   &kp LEFT   &kp DOWN   &kp RIGHT &trans       &kp SEMI 
-   &tog GAM     &kp Z      &kp X      &kp C     &kp K_PASTE  &kp K_COPY    &kp K_COPY   &kp K_PASTE   &kp COMMA &kp DOT &kp FSLH &kp LGUI
+   &kp TAB       &kp HOME      &kp UP      &kp END      &kp K_CUT    &kp TAB           &kp K_CUT      &kp HOME      &kp UP       &kp END      &kp DEL    &kp TAB   
+   &kp LCTRL     &kp LEFT      &kp DOWN    &kp RIGHT    &kp K_COPY   &trans            &kp K_COPY     &kp LEFT      &kp DOWN     &kp RIGHT    &trans       &kp SEMI 
+   &kp LALT      &kp Z         &kp X       &kp C        &kp K_PASTE  &kp K_COPY        &kp K_COPY     &kp K_PASTE   &kp COMMA    &kp DOT      &kp FSLH       &kp LGUI
                                       &lt FUN ESC  &lt MTH BKSP &lt NAV SPACE       &lt NAV SPACE   &lt MTH TAB   &lt FUN RET
                         >;
                 };
