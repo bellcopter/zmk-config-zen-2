@@ -2,17 +2,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-// A 6 column Corneish-Zen laid out with CAD prioritization
-// Shift is accomplished with Mod-Tap on 16 & 19 (T & N)
-// Holding the thumb keys shifts between layers. thumb key holds are symmetric
-// 
-// To-do: create combos, activate a game-specific layer  
-
-
 // Layers 
 #define MTH 1
 #define NAV 2
 #define FUN 3
+#define COL 4
 
 
 / {
@@ -44,7 +38,7 @@
                         bindings = <
    &kp LALT     &kp Q        &kp W        &kp E        &kp R        &kp T          &kp Y        &kp U        &kp I        &kp O        &kp P         &kp BKSP
    &kp LCTRL    &kp A        &kp S        &kp D        &hm LSHFT F  &kp G          &kp H        &hm RSHFT J  &kp K        &kp L        &kp SEMI      &kp APOS 
-   &kp LGUI     &kp Z        &kp X        &kp C        &kp V        &kp B          &kp N        &kp M        &kp COMMA    &kp DOT      &kp FSLH      &kp RET   
+   &kp LGUI     &kp Z        &kp X        &kp C        &kp V        &kp B          &kp N        &kp M        &kp COMMA    &kp DOT      &kp FSLH      &tog COL   
                                       &lt FUN ESC  &lt MTH BKSP &lt NAV SPACE    &lt NAV SPACE   &lt MTH TAB   &lt FUN RET
                         >;
                 };
@@ -53,7 +47,7 @@
                         label = "Math";                 
                         bindings = <
    &kp LALT     &kp Q        &kp N7       &kp N8       &kp N9      &kp MINUS       &kp MINUS     &kp N7       &kp N8       &kp N9       &kp EQUAL     &kp DEL
-   &kp LCTRL    &kp A        &kp N4       &kp N5       &kp N6      &kp PLUS        &kp PLUS      &kp N4       &kp N5       &kp N6       &kp KP_MULTIPLY    &kp SEMI 
+   &kp LCTRL    &kp A        &kp N4       &kp N5       &kp N6      &kp PLUS        &kp PLUS      &kp N4       &kp N5       &kp N6       &kp KP_MULTIPLY &kp SEMI 
    &kp LGUI     &kp Z        &kp N1       &kp N2       &kp N3      &kp N0          &kp N0        &kp N1       &kp N2       &kp N3       &kp FSLH      &kp LGUI
                                       &lt FUN ESC  &lt MTH BKSP &lt NAV SPACE    &lt NAV SPACE   &lt MTH TAB   &lt FUN RET
                         >;
@@ -62,22 +56,32 @@
                 nav_layer {
                         label = "Navigation";                 
                         bindings = <
-   &kp LALT     &kp HOME     &kp UP       &kp END      &kp K_CUT    &kp TAB        &kp LC(LA(DEL)) &kp HOME      &kp UP       &kp END      &trans    &kp DEL   
-   &kp LCTRL    &kp LEFT     &kp DOWN     &kp RIGHT    &kp K_COPY   &trans         &kp LC(C)     &kp LEFT      &kp DOWN     &kp RIGHT    &trans       &kp SEMI 
-   &kp LGUI     &kp Z        &kp X        &kp C        &kp K_PASTE  &kp K_COPY     &kp LC(P)     &kp LC(V)   &kp COMMA    &kp DOT      &kp FSLH       &kp LGUI
-                                      &lt FUN ESC  &lt MTH BKSP &lt NAV SPACE       &lt NAV SPACE   &lt MTH TAB   &lt FUN RET
+   &kp LALT     &kp HOME     &kp UP       &kp END      &kp K_CUT    &kp TAB        &kp LG(LA(DEL)) &kp HOME   &kp UP       &kp END      &trans        &kp DEL   
+   &kp LCTRL    &kp LEFT     &kp DOWN     &kp RIGHT    &kp K_COPY   &trans         &kp LG(C)     &kp LEFT     &kp DOWN     &kp RIGHT    &trans        &kp SEMI 
+   &kp LGUI     &kp Z        &kp X        &kp C        &kp K_PASTE  &kp K_COPY     &kp LG(P)     &kp LG(V)    &kp COMMA    &kp DOT      &kp FSLH      &kp LGUI
+                                      &lt FUN ESC  &lt MTH BKSP &lt NAV SPACE    &lt NAV SPACE   &lt MTH TAB   &lt FUN RET
                         >;
                 };
 
                 fun_layer {
                         label = "Functions";                 
                         bindings = <
-   &kp LALT     &kp F7       &kp F8       &kp F9       &kp F12      &bt BT_SEL 0      &kp J         &kp F7      &kp F8     &kp F9   &kp F12    &kp DEL
-   &kp LCTRL    &kp F4       &kp F5       &kp F6       &kp F11      &bt BT_SEL 1      &kp M         &kp F4    &kp F5     &kp F6   &kp F11    &kp SEMI 
-   &kp LGUI     &kp F1       &kp F2       &kp F3       &kp F10      &bt BT_SEL 2      &kp N         &kp F1   &kp F2 &kp F3 &kp F10 &kp LGUI
-                                      &lt FUN ESC  &lt MTH BKSP &lt NAV SPACE       &lt NAV SPACE   &lt MTH TAB   &lt FUN RET
+   &kp LALT     &kp F7       &kp F8       &kp F9       &kp F12      &bt BT_SEL 0   &kp J         &kp F7       &kp F8       &kp F9       &kp F12       &kp DEL
+   &kp LCTRL    &kp F4       &kp F5       &kp F6       &kp F11      &bt BT_SEL 1   &kp M         &kp F4       &kp F5       &kp F6       &kp F11       &kp SEMI 
+   &kp LGUI     &kp F1       &kp F2       &kp F3       &kp F10      &bt BT_SEL 2   &kp N         &kp F1       &kp F2       &kp F3       &kp F10       &kp LGUI
+                                      &lt FUN ESC  &lt MTH BKSP &lt NAV SPACE    &lt NAV SPACE   &lt MTH TAB   &lt FUN RET
                         >;
-                };    
+                };   
+
+                colemak_layer {
+                        label = "Colemak";                 
+                        bindings = <
+   &kp LALT     &kp Q        &kp W        &kp F        &kp P        &kp B          &kp J        &kp L        &kp U        &kp Y        &trans        &kp BKSP
+   &kp LCTRL    &kp A        &kp R        &kp S        &hm LSHFT T  &kp G          &kp M        &hm RSHFT N  &kp E        &kp I        &kp O         &kp APOS 
+   &kp LGUI     &kp Z        &kp X        &kp C        &kp D        &kp V          &kp K        &kp H        &kp COMMA    &kp DOT      &kp FSLH      &kp RET   
+                                      &lt FUN ESC  &lt MTH BKSP &lt NAV SPACE    &lt NAV SPACE   &lt MTH TAB   &lt FUN RET
+                        >;
+                }; 
                         
         };
 };
