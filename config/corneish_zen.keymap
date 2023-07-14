@@ -66,7 +66,7 @@
                 fun_layer {
                         label = "Functions";                 
                         bindings = <
-   &kp LALT     &kp F7       &kp F8       &kp F9       &kp F12      &bt BT_SEL 0   &kp J         &kp F7       &kp F8       &kp F9       &kp F12       &kp DEL
+   &kp LALT     &kp F7       &kp F8       &kp F9       &kp F12      &bt BT_SEL 0   &bt BT_CLR    &kp F7       &kp F8       &kp F9       &kp F12       &kp DEL
    &kp LCTRL    &kp F4       &kp F5       &kp F6       &kp F11      &bt BT_SEL 1   &kp M         &kp F4       &kp F5       &kp F6       &kp F11       &kp SEMI 
    &kp LGUI     &kp F1       &kp F2       &kp F3       &kp F10      &bt BT_SEL 2   &kp N         &kp F1       &kp F2       &kp F3       &kp F10       &kp LGUI
                                       &lt FUN ESC  &lt MTH BKSP &lt NAV SPACE    &lt NAV SPACE   &lt MTH TAB   &lt FUN RET
